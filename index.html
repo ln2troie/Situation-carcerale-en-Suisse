@@ -9,8 +9,12 @@
 </head>
 <body>
     <script>
+    
         var data = [10,50,80];
         var r = 300;
+
+        var color = d3.scale.ordinal()
+            .range(["red","blue","orange"])
 
         var canvas = d3.select("body").append("svg")
             .attr("width",1500)
@@ -33,9 +37,9 @@
             .attr("class","arc");
 
         arcs.append("path")
-            .attr("d",arc);
-            .attr("fill",function(d){return color(d); })
-
+            .attr("d",arc)
+            .attr("fill",function(d){return color(d.data); })
+      
     </script>
     
     
