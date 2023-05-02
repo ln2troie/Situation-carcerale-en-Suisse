@@ -13,24 +13,22 @@ dataset =  [11, 20, 22, 7, 6, 6, 20, 8, 10, 14, 9, 19, 23, 8, 24, 21, 20, 22, 9,
 w = 500;
 h = 500; 
 
-
 // xScale will help us set the x position of the bars
 xScale = d3.scaleBand() //Ordinal scale
            .domain(d3.range(dataset.length)) //sets the input domain for the scale
            .rangeRound([0, w]) //enables rounding of the range
            .paddingInner(0.05); //spacing between each bar
 
-
 //yScale will help us map data to the height of bars in the barchart
 yScale = d3.scaleLinear()
-		    .domain([0, d3.max(dataset)]) //sets the upper end of the input domain to the largest data value in dataset
-			.range([0, h]);    
+            .domain([0, d3.max(dataset)]) //sets the upper end of the input domain to the largest data value in dataset
+            .range([0, h]);    
 
 //Create SVG element
-svg = d3.select(body)
-				.append("svg")
-				.attr("width", w)
-				.attr("height", h);
+svg = d3.select("body")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
 
 //Create bars
 svg.selectAll("rect")
@@ -58,7 +56,6 @@ svg.selectAll("rect")
         updateBar(); //Updates the bar chart
     });
 
-
     function updateBar(){
   //Update all rects
   svg.selectAll("rect")
@@ -75,6 +72,7 @@ svg.selectAll("rect")
       return "rgb("+ Math.round(d * 8) + ",0," + Math.round(d * 10) + ")";
     });
 }
+                
                 
     </script>
     
