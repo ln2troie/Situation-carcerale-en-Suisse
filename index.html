@@ -4,37 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>src= "https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.4/d3.min.js"</script>
-    <title>Document</title>
+    <script>src= "https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.4/d3.js "</script>
 </head>
 <body>
     <script>
-   const dataArray = [20,40,50];
-const width = 500;
-const heigth = 500; 
+dataset =  [11, 20, 22, 7, 6, 6, 20, 8, 10, 14, 9, 19, 23, 8, 24, 21, 20, 22, 9, 9]
 
-const widthScale = d3.scale.linear()
-                .domain([0,60])
-                .range([0,width]);
+w = 500;
+h = 500; 
 
-const color = d3.scale.linear()
-            .domain([0,60])
-            .range(["red","blue"]);
 
-const canvas = d3.select("body")
-            .append("svg")
-            .attr("width",500)
-            .attr("heigth",500);
+// xScale will help us set the x position of the bars
+xScale = d3.scaleBand() //Ordinal scale
+           .domain(d3.range(dataset.length)) //sets the input domain for the scale
+           .rangeRound([0, w]) //enables rounding of the range
+           .paddingInner(0.05); //spacing between each bar
 
-const bars = canvas.selectAll("rect")
-            .data(dataArray)
-            .enter()
-                .append("rect")
-                .attr("width", d=> widthScale(d)) 
-                .attr("heigth",50) 
-                .attr("fill", d=>color(d))
-                .attr("y",(d,i)=> i*100);
-        
+
+//yScale will help us map data to the height of bars in the barchart
+yScale = d3.scaleLinear()
+		    .domain([0, d3.max(dataset)]) //sets the upper end of the input domain to the largest data value in dataset
+			.range([0, h]);    
+
+//Create SVG element
+svg = d3.select(body)
+				.append("svg")
+				.attr("width", w)
+				.attr("height", h);
+
+//Create bars
+svg.selectAll("rect")
+  .data(dataset)
+  .enter()
+  .append("rect")
+  .attr("x", function(d, i) { // position in x-axis
+    return xScale(i); // we will pass the values from the dataset
+  })
+  .attr("y", function(d) {
+    return h - yScale(d);
+  })
+  .attr("width", xScale.bandwidth()) //Asks for the bandwith of the scale
+  .attr("height", function(d) {
+    return yScale(d);
+  })
+  .attr("fill", function(d) {
+    return "rgb("+ Math.round(d * 8) + ",0," + Math.round(d * 10) + ")"; //Change the color of the bar depending on the value
+  });
+
+  //ajout interaction
+  d3.select(button)
+    .on("click", function() {
+        newData(); //Changes de values of the data
+        updateBar(); //Updates the bar chart
+    });
+
+
+    function updateBar(){
+  //Update all rects
+  svg.selectAll("rect")
+    .data(dataset)
+    .transition() // <---- Here is the transition
+    .duration(2000) // 2 seconds
+    .attr("y", function(d) {
+      return h - yScale(d);
+    })
+    .attr("height", function(d) {
+      return yScale(d);
+    })
+    .attr("fill", function(d) {
+      return "rgb("+ Math.round(d * 8) + ",0," + Math.round(d * 10) + ")";
+    });
+}
                 
     </script>
     
