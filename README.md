@@ -1,4 +1,4 @@
-# Travail-visualisation-
+# Situation carcérale en Suisse 
 
 La situation carcérale en Suisse 
 
@@ -75,3 +75,5 @@ Les biais possibles et autres points à améliorer :
 L’axe des Y étant différent pour chaque représentation et l’échelle étant changeante, un lecteur qui ne porterait pas une lecture attentive sur la différence de graduation entre les différentes représentations pourrait laisser croire que le nombre de personnes en détention et pratiquement similaire au nombre de suicides (alors qu’il s’agit de deux échelles différentes).
 
 L’utilisation de représentation « en cookies » afin de pouvoir représenter des données liées entre elles aurait pu apporter un élément intéressant à notre visualisation de données en nous permettant de lier les différentes données entre elles. 
+
+Ce projet a été réalisé dans le cadre du cours de visualisation de données dispensé par le Professeur Isaac Pante. 
