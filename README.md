@@ -1,8 +1,6 @@
 # Situation carcérale en Suisse 
 
-Une image de notre visualisation est disponible dans le fichier suivant: 
-
-https://github.com/ln2troie/Situation-carcerale-en-Suisse/blob/main/Exemple%20visualisation.jpg
+Une image de notre visualisation est disponible [ici](https://github.com/ln2troie/Situation-carcerale-en-Suisse/blob/main/Exemple%20visualisation.jpg) 
 
 Description : cette visualisation a été effectuée grâce à la bibliothèque graphique « D3.js. » Les données ont été récoltées sur « Open Data ». Il s’agit des données de l’organisation fédérale de la statistique, plus précisément le relevé de la privation de Liberté (FHE). 
 
