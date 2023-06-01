@@ -1,7 +1,5 @@
 # Situation carcérale en Suisse 
 
-La situation carcérale en Suisse 
-
 Une image de notre visualisation est disponible dans le fichier suivant: 
 
 https://github.com/ln2troie/Situation-carcerale-en-Suisse/blob/main/image/Capture%20d%E2%80%99e%CC%81cran%202023-05-30%20a%CC%80%2011.23.35.jpg
