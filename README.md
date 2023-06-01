@@ -6,7 +6,7 @@ https://github.com/ln2troie/Situation-carcerale-en-Suisse/blob/main/Exemple%20vi
 
 Description : cette visualisation a été effectuée grâce à la bibliothèque graphique « D3.js. » Les données ont été récoltées sur « Open Data ». Il s’agit des données de l’organisation fédérale de la statistique, plus précisément le relevé de la privation de Liberté (FHE). 
 
-Chaque année, les données relatives à l’effectif des personnes en détention en Suisse sont recensées le 31 janvier, auprès des établissements pénitentiaires cantonaux des départements de justice et police. Il recense le nombre de personnes en détention le jour du relevé, selon le sexe, la nationalité, le nombre de places disponibles. Le nombre de décès et de suicides est également relevé. 
+Chaque année, les données relatives à l’effectif des personnes en détention en Suisse sont recensées le 31 janvier, auprès des établissements pénitentiaires cantonaux des départements de justice et police. Cette base de données recense le nombre de personnes en détention le jour du relevé, selon le sexe, la nationalité, le nombre de places disponibles. Le nombre de décès et de suicides est également relevé. 
 
 Librairie utilisée : D3.js.
 
