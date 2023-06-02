@@ -2,7 +2,7 @@
 
 Voici une image de notre visualisation :
 
- ![ici](https://github.com/ln2troie/Situation-carcerale-en-Suisse/blob/main/Exemple%20visualisation.jpg?raw=true). 
+ ![ici](https://github.com/ln2troie/Situation-carcerale-en-Suisse/blob/main/Exemple%20visualisation.jpg?raw=true) 
 
 Description : cette visualisation a été effectuée grâce à la bibliothèque graphique « D3.js. » Les données ont été récoltées sur « Open Data ». Il s’agit des données de l’organisation fédérale de la statistique, plus précisément le relevé de la privation de Liberté (FHE). 
 
@@ -59,7 +59,7 @@ Notre visualisation de données utilise le langage HTML et intègre du Java scri
 
 -	Un fichier « bar_chart_embedded.html » permet d’ouvrir notre projet à partir d’un navigateur web et contient directement toutes les informations. Cette option permet d’accéder à notre visualisation directement sans l’aide de l’IDE.
 
-- Un fichier "image.txt" contenant une image de notre représentation. 
+- Un fichier "Exemple visualisation.jpg" contenant une image de notre représentation. 
 
 La situation carcérale en générale : 
 
