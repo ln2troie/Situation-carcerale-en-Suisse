@@ -10,7 +10,10 @@
   <!-- Load d3.js -->
   <script src="https://d3js.org/d3.v7.js"></script>
 
-  <div id="divButtons"></div>
+  <div id="divButtons"  style="text-align: center;">
+    <select id="selectList">
+    </select>
+  </div>
   <div style="text-align: center;" id="title"></div>
 
   <!-- Create a div where the graph will take place -->
@@ -1275,9 +1278,9 @@ datas.columns = [
       }
 
       for (var i = 0; i < arrOptions.length; i++) {
-        var btnShow = document.createElement("input");
-        btnShow.setAttribute("type", "button");
+        var btnShow = document.createElement("option");
         btnShow.value = headers[i];
+        btnShow.innerHTML = headers[i];
 
         let optionPar = datas.map(data => {
 
@@ -1293,7 +1296,7 @@ datas.columns = [
           update(this.value, optionPar);
         }
 
-        document.getElementById('divButtons').appendChild(btnShow);
+        document.getElementById('selectList').appendChild(btnShow);
       }
 
     // });
