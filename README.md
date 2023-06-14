@@ -72,4 +72,6 @@ Les biais possibles et autres points à améliorer :
 
 L’axe des Y étant différent pour chaque représentation et l’échelle étant changeante, un lecteur qui ne porterait pas une lecture attentive sur la différence de graduation entre les différentes représentations pourrait penser que le nombre de personnes en détention est pratiquement similaire au nombre de suicides (alors qu’il s’agit de deux échelles différentes).
 
+Ce code ne fonctionne que sur le naviguateur Firefox. Il ne fonctionne malheureusement pas sur les navigateurs Safari,Edge ou Chrome. 
+
 Ce projet a été réalisé dans le cadre du cours de visualisation de données dispensé par le Professeur Isaac Pante. 
